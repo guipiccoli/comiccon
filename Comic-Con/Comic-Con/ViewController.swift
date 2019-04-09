@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet var day2btn: UIButton!
     @IBOutlet var day4btn: UIButton!
     @IBOutlet var day3btn: UIButton!
+
+    
     @IBOutlet weak var tableView: UITableView!
     private var cellExpandable: Bool = false
     var selectedIndexPath: IndexPath?
@@ -80,7 +82,7 @@ extension ViewController: UITableViewDataSource {
         cell.hourSessionLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         cell.smallDescriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         cell.trackLocationLabel.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        cell.bigDescriptionLabel.font = UIFont.systemFont(ofSize: 13.2, weight: .regular)
+        cell.bigDescriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         
  
         let formatter = DateFormatter()
@@ -97,8 +99,11 @@ extension ViewController: UITableViewDataSource {
         cell.speakerSessionLabel.text = sessionAtIndexPath.speaker
         cell.numberSessionLabel.text = "SESSION \(sessionAtIndexPath.idSession):"
         cell.smallDescriptionLabel.text = sessionAtIndexPath.smallDescription
+        //cell.smallDescriptionLabel.adjustsFontSizeToFitWidth = true
         cell.bigDescriptionLabel.text = sessionAtIndexPath.bigDescription
+       //cell.bigDescriptionLabel.sizeToFit()
         cell.trackLocationLabel.text = sessionAtIndexPath.trackLocation
+        cell.trackLocationLabel.sizeToFit()
         //cell.createCircle(timeElapsedPercentage: 3/4)
         
         return cell
@@ -135,7 +140,9 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if cellExpandable && indexPath == selectedIndexPath {
-            return 540.3
+            tableView.rowHeight = UITableView.automaticDimension
+            tableView.estimatedRowHeight = 540.3
+            return tableView.rowHeight
         } else {
             return 115
         }
