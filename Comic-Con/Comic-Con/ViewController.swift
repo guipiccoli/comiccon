@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+  
+    
     @IBOutlet weak var tableView: UITableView!
     private var cellExpandable: Bool = false
     var selectedIndexPath: IndexPath?
@@ -32,6 +34,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell  = tableView.dequeueReusableCell(withIdentifier: "teste") as! SessionTableViewCell
         
         let sessionAtIndexPath = sessions.list[indexPath.row]
@@ -50,8 +53,14 @@ extension ViewController: UITableViewDataSource {
         cell.smallDescriptionLabel.text = sessionAtIndexPath.smallDescription
         cell.bigDescriptionLabel.text = sessionAtIndexPath.bigDescription
         cell.trackLocationLabel.text = sessionAtIndexPath.trackLocation
+        //cell.createCircle(timeElapsedPercentage: 3/4)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        (cell as? SessionTableViewCell)?.createCircle(timeElapsedPercentage: 3/4)
+
     }
 }
 
