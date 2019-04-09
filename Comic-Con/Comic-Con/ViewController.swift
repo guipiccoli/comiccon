@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-  
+
     
     @IBOutlet weak var tableView: UITableView!
     private var cellExpandable: Bool = false
@@ -51,8 +51,11 @@ extension ViewController: UITableViewDataSource {
         cell.speakerSessionLabel.text = sessionAtIndexPath.speaker
         cell.numberSessionLabel.text = "SESSION \(sessionAtIndexPath.idSession):"
         cell.smallDescriptionLabel.text = sessionAtIndexPath.smallDescription
+        cell.smallDescriptionLabel.adjustsFontSizeToFitWidth = true
         cell.bigDescriptionLabel.text = sessionAtIndexPath.bigDescription
+        cell.bigDescriptionLabel.sizeToFit()
         cell.trackLocationLabel.text = sessionAtIndexPath.trackLocation
+        cell.trackLocationLabel.sizeToFit()
         //cell.createCircle(timeElapsedPercentage: 3/4)
         
         return cell
@@ -89,7 +92,9 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if cellExpandable && indexPath == selectedIndexPath {
-            return 540.3
+            tableView.rowHeight = UITableView.automaticDimension
+            tableView.estimatedRowHeight = 540.3
+            return tableView.rowHeight
         } else {
             return 115
         }

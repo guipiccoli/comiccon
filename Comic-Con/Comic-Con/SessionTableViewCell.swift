@@ -43,18 +43,18 @@ class SessionTableViewCell: UITableViewCell {
         
         
         semiCircleLayer.path = circlePath.cgPath
-        semiCircleLayer.strokeColor = UIColor(red: 75/255, green: 98/255, blue: 169/255, alpha: 1.0).cgColor
+        semiCircleLayer.strokeColor = UIColor(red: 89/255, green: 46/255, blue: 101/255, alpha: 1.0).cgColor
         semiCircleLayer.fillColor = UIColor.clear.cgColor
-        semiCircleLayer.lineWidth = 7
+        semiCircleLayer.lineWidth = 6
         semiCircleLayer.strokeStart = 0
         semiCircleLayer.strokeEnd  = CGFloat(timeElapsedPercentage)
         self.imageLayer.layer.addSublayer(semiCircleLayer)
         
         
         semiCircleLayer2.path = circlePath2.cgPath
-        semiCircleLayer2.strokeColor = UIColor(red: 75/255, green: 98/255, blue: 169/255, alpha: 1.0).cgColor
+        semiCircleLayer2.strokeColor = UIColor(red: 89/255, green: 46/255, blue: 101/255, alpha: 1.0).cgColor
         semiCircleLayer2.fillColor = UIColor.clear.cgColor
-        semiCircleLayer2.lineWidth = 7
+        semiCircleLayer2.lineWidth = 6
         semiCircleLayer2.strokeStart = 0
         semiCircleLayer2.strokeEnd  = CGFloat(timeElapsedPercentage)
         self.imageLayer.layer.addSublayer(semiCircleLayer2)
@@ -62,7 +62,7 @@ class SessionTableViewCell: UITableViewCell {
         semiCircleLayer3.path = circlePath3.cgPath
         semiCircleLayer3.strokeColor = UIColor(red: 223/255, green: 187/255, blue: 20/255, alpha: 1.0).cgColor
         semiCircleLayer3.fillColor = UIColor.clear.cgColor
-        semiCircleLayer3.lineWidth = 7
+        semiCircleLayer3.lineWidth = 6
         semiCircleLayer3.strokeStart = 0
         semiCircleLayer3.strokeEnd  = CGFloat( 1 - timeElapsedPercentage )
         self.imageLayer.layer.addSublayer(semiCircleLayer3)
@@ -70,7 +70,7 @@ class SessionTableViewCell: UITableViewCell {
         semiCircleLayer4.path = circlePath4.cgPath
         semiCircleLayer4.strokeColor = UIColor(red: 223/255, green: 187/255, blue: 20/255, alpha: 1.0).cgColor
         semiCircleLayer4.fillColor = UIColor.clear.cgColor
-        semiCircleLayer4.lineWidth = 7
+        semiCircleLayer4.lineWidth = 6
         semiCircleLayer4.strokeStart = 0
         semiCircleLayer4.strokeEnd  = CGFloat( 1 - timeElapsedPercentage )
         self.imageLayer.layer.addSublayer(semiCircleLayer4)
