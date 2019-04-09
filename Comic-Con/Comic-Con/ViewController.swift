@@ -55,11 +55,9 @@ class ViewController: UIViewController {
         
         if sender.image(for: .normal) == disable {
             sender.setImage(enable, for: .normal)
-            print("disable")
         }
         else {
             sender.setImage(disable, for: .normal)
-            print("enable")
         }
         
     }
@@ -83,7 +81,6 @@ extension ViewController: UITableViewDataSource {
         cell.smallDescriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         cell.trackLocationLabel.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         cell.bigDescriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        
  
         let formatter = DateFormatter()
         
@@ -105,6 +102,20 @@ extension ViewController: UITableViewDataSource {
         cell.trackLocationLabel.text = sessionAtIndexPath.trackLocation
         cell.trackLocationLabel.sizeToFit()
         //cell.createCircle(timeElapsedPercentage: 3/4)
+        
+        switch sessionAtIndexPath.stageNumber {
+        case 1:
+            cell.locationImage.image = UIImage(named: "stage_1")
+        case 2:
+        cell.locationImage.image = UIImage(named: "stage_2")
+        case 3:
+        cell.locationImage.image = UIImage(named: "stage_3")
+        case 4:
+        cell.locationImage.image = UIImage(named: "stage_4")
+        default:
+            cell.locationImage.image = nil
+        }
+        
         
         return cell
     }

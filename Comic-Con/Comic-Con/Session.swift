@@ -21,11 +21,12 @@ public struct Session {
     var smallDescription: String
     var bigDescription: String
     var trackLocation: String
+    var stageNumber: Int
 }
 
 extension Session {
     
-    init(idSession: Int, imageSpeaker: String, sessionStartHour: Int, sessionStartMinute: Int, sessionEndHour: Int, sessionEndMinute: Int, speaker: String, smallDescription: String, bigDescription: String, trackLocation: String) {
+    init(idSession: Int, imageSpeaker: String, sessionStartHour: Int, sessionStartMinute: Int, sessionEndHour: Int, sessionEndMinute: Int, speaker: String, smallDescription: String, bigDescription: String, trackLocation: String, stageNumber: Int) {
         
         self.idSession = idSession
         
@@ -47,6 +48,7 @@ extension Session {
         self.smallDescription = smallDescription
         self.bigDescription = bigDescription
         self.trackLocation = trackLocation
+        self.stageNumber = stageNumber
         
     }
     
