@@ -16,6 +16,7 @@ public class SessionBank{
         
         
         list.append(Session.init(idSession: 1,
+                                 imageSpeaker: "1_sergio",
                                  sessionStartHour: 02,
                                  sessionStartMinute: 00,
                                  sessionEndHour: 03,
@@ -26,6 +27,7 @@ public class SessionBank{
                                  trackLocation: "Comics @ Exhibit Hall 1"))
         
         list.append(Session.init(idSession: 2,
+                                 imageSpeaker: "2_vita",
                                  sessionStartHour: 02,
                                  sessionStartMinute: 00,
                                  sessionEndHour: 03,
@@ -36,6 +38,7 @@ public class SessionBank{
                                  trackLocation: "Comics @ Exhibit Hall 2"))
         
         list.append(Session.init(idSession: 3,
+                                 imageSpeaker: "3_peter",
                                  sessionStartHour: 02,
                                  sessionStartMinute: 00,
                                  sessionEndHour: 04,
@@ -46,6 +49,7 @@ public class SessionBank{
                                  trackLocation: "Books and Novels @ Exhibit Hall 3"))
         
         list.append(Session.init(idSession: 4,
+                                 imageSpeaker: "4_jen",
                                  sessionStartHour: 03,
                                  sessionStartMinute: 45,
                                  sessionEndHour: 05,
@@ -57,6 +61,7 @@ public class SessionBank{
         
         
         list.append(Session.init(idSession: 5,
+                                 imageSpeaker: "5_julie",
                                  sessionStartHour: 03,
                                  sessionStartMinute: 15,
                                  sessionEndHour: 04,
@@ -67,6 +72,7 @@ public class SessionBank{
                                  trackLocation: "TV and Series @ Exhibit Hall 2"))
         
         list.append(Session.init(idSession: 6,
+                                 imageSpeaker: "6_shawna",
                                  sessionStartHour: 03,
                                  sessionStartMinute: 15,
                                  sessionEndHour: 04,
@@ -77,6 +83,7 @@ public class SessionBank{
                                  trackLocation: "TV and Series @ Exhibit Hall 2"))
         
         list.append(Session.init(idSession: 7,
+                                 imageSpeaker: "7_kendare",
                                  sessionStartHour: 04,
                                  sessionStartMinute: 30,
                                  sessionEndHour: 05,
@@ -87,6 +94,7 @@ public class SessionBank{
                                  trackLocation: "Books and Novels @ Exhibit Hall 3"))
         
         list.append(Session.init(idSession: 8,
+                                 imageSpeaker: "8_greg",
                                  sessionStartHour: 05,
                                  sessionStartMinute: 15,
                                  sessionEndHour: 06,
@@ -99,6 +107,7 @@ public class SessionBank{
         
         
         list.append(Session.init(idSession: 9,
+                                 imageSpeaker: "9_donny",
                                  sessionStartHour: 04,
                                  sessionStartMinute: 30,
                                  sessionEndHour: 06,
@@ -109,6 +118,7 @@ public class SessionBank{
                                  trackLocation: "Comics @ Exhibit Hall 2"))
         
         list.append(Session.init(idSession: 10,
+                                 imageSpeaker: "10_katie",
                                  sessionStartHour: 06,
                                  sessionStartMinute: 00,
                                  sessionEndHour: 07,

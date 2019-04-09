@@ -31,7 +31,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQD-HP-nTx">
                                                 <rect key="frame" x="0.0" y="0.0" width="94.5" height="48"/>
-                                                <color key="backgroundColor" red="0.31313818693161011" green="0.38275539875030518" blue="0.64316421747207642" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="backgroundColor" red="0.21575501561164856" green="0.11529377847909927" blue="0.22746095061302185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="C7t-uO-E7Q"/>
                                                     <constraint firstAttribute="width" constant="94.299999999999997" id="n8e-pb-RKr"/>
@@ -50,7 +50,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="July 19">
-                                                    <color key="titleColor" red="0.38720366360000003" green="0.47000861170000002" blue="0.7019864321" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.32587048411369324" green="0.18766382336616516" blue="0.38433098793029785" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq0-6p-sMt">
@@ -62,7 +62,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="July 20">
-                                                    <color key="titleColor" red="0.38720366360000003" green="0.47000861170000002" blue="0.7019864321" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.31802821159362793" green="0.18384137749671936" blue="0.37648755311965942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uD-Ah-zsN">
@@ -74,7 +74,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <state key="normal" title="July 21">
-                                                    <color key="titleColor" red="0.38720366360000003" green="0.47000861170000002" blue="0.7019864321" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.32587048411369324" green="0.18766382336616516" blue="0.38433098793029785" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
                                         </subviews>
@@ -101,10 +101,10 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="479-oe-UmY">
-                                                                            <rect key="frame" x="15" y="15" width="82.5" height="85"/>
+                                                                            <rect key="frame" x="15" y="15" width="22" height="85"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aragones" translatesAutoresizingMaskIntoConstraints="NO" id="1Qy-qI-CFm" customClass="BorderView" customModule="Comic_Con" customModuleProvider="target">
-                                                                                    <rect key="frame" x="3" y="3" width="76.500000000000028" height="79"/>
+                                                                                    <rect key="frame" x="3" y="3" width="16" height="79"/>
                                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <userDefinedRuntimeAttributes>
                                                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -122,12 +122,12 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ujc-qw-CkJ">
-                                                                            <rect key="frame" x="112.5" y="11" width="221" height="95.5"/>
+                                                                            <rect key="frame" x="52" y="11" width="281.5" height="95.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session x:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc5-Mu-dXk">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="221" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                                                    <color key="textColor" red="0.29411764705882354" green="0.38431372549019605" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <color key="textColor" red="0.25128456950187683" green="0.14562231302261353" blue="0.29805278778076172" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wed 2:00PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6j-RS-KW8">
@@ -139,7 +139,7 @@
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sérgio Aragones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxi-3R-gEE">
                                                                                     <rect key="frame" x="0.0" y="40.5" width="221" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                                                    <color key="textColor" red="0.38720366358757019" green="0.47000861167907715" blue="0.70198643207550049" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    <color key="textColor" red="0.26304805278778076" green="0.15339353680610657" blue="0.30981788039207458" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist, MAD Magazine, Groo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5B-JM-0UE">
@@ -183,23 +183,24 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="B1E-L2-Njh">
                                                                             <rect key="frame" x="338" y="43" width="60" height="28"/>
                                                                             <subviews>
-                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-yi-2yI">
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-yi-2yI">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="28" id="OPT-gV-8g9"/>
                                                                                         <constraint firstAttribute="width" constant="28" id="fJU-Gs-lNT"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                                                    <state key="normal" title="STAR"/>
+                                                                                    <state key="normal" title="STAR" image="star_1"/>
+                                                                                    <connections>
+                                                                                        <action selector="favoriteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BZw-IS-e80"/>
+                                                                                    </connections>
                                                                                 </button>
-                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkH-gs-2XN">
+                                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkH-gs-2XN">
                                                                                     <rect key="frame" x="46" y="0.0" width="14" height="28"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" constant="14" id="EVn-4i-LIy"/>
                                                                                         <constraint firstAttribute="height" constant="28" id="MXe-8o-PWv"/>
                                                                                     </constraints>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                                                    <state key="normal" title="Arrow"/>
+                                                                                    <state key="normal" title="Arrow" image="more"/>
                                                                                 </button>
                                                                             </subviews>
                                                                         </stackView>
@@ -295,11 +296,15 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="search" id="HSN-9O-1mn">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="1x6-uv-f5H">
+                        <barButtonItem key="rightBarButtonItem" image="mapButton" id="1x6-uv-f5H">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="day1btn" destination="XQD-HP-nTx" id="jt4-db-77a"/>
+                        <outlet property="day2btn" destination="V7A-8j-UXr" id="cDZ-WZ-Csd"/>
+                        <outlet property="day3btn" destination="Yq0-6p-sMt" id="dYk-kd-hlx"/>
+                        <outlet property="day4btn" destination="6uD-Ah-zsN" id="qKK-tl-Av3"/>
                         <outlet property="tableView" destination="sPw-qJ-U0M" id="zgI-81-u1H"/>
                     </connections>
                 </viewController>
@@ -315,9 +320,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.2512845695" green="0.145622313" blue="0.2980527878" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="DJG-8K-HD1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="YeZ-h1-kD2"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" selectedImage="profile_selected" id="YeZ-h1-kD2">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xd2-UG-Bhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -333,8 +341,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="C2S-Tr-BfF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="2ad-T5-z6Z">
-                        <color key="badgeColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    <tabBarItem key="tabBarItem" title="News" image="news" selectedImage="news_selected" id="2ad-T5-z6Z">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFf-OC-WAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -346,10 +354,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="xSv-B4-VN6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cEY-Vd-LHg">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="cEY-Vd-LHg">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.2512845695" green="0.145622313" blue="0.2980527878" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="VQS-wV-UFd" kind="relationship" relationship="viewControllers" id="Y16-2Q-kv7"/>
@@ -365,15 +375,15 @@
         <scene sceneID="sfy-Zz-WWv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VQS-wV-UFd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Schedule" id="78d-Uo-Ybw">
-                        <color key="badgeColor" red="0.3131381869" green="0.38275539879999998" blue="0.64316421749999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="schedule" selectedImage="schedule_selected" id="78d-Uo-Ybw">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="zPS-sR-WgC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" backIndicatorImage="bgnavbar" backIndicatorTransitionMaskImage="bgnavbar" id="zPS-sR-WgC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.38720366360000003" green="0.47000861170000002" blue="0.7019864321" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" red="0.31313818693161011" green="0.38275539875030518" blue="0.64316421747207642" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -392,5 +402,15 @@
     </scenes>
     <resources>
         <image name="aragones" width="187" height="186"/>
+        <image name="bgnavbar" width="1125" height="5549"/>
+        <image name="mapButton" width="26.333333969116211" height="25.666666030883789"/>
+        <image name="more" width="14" height="28"/>
+        <image name="news" width="25" height="25.333333969116211"/>
+        <image name="news_selected" width="25.666666030883789" height="25.333333969116211"/>
+        <image name="profile" width="20.333333969116211" height="24.666666030883789"/>
+        <image name="profile_selected" width="20.333333969116211" height="24.333333969116211"/>
+        <image name="schedule" width="20" height="25.333333969116211"/>
+        <image name="schedule_selected" width="20" height="25.333333969116211"/>
+        <image name="star_1" width="28.666666030883789" height="27.333333969116211"/>
     </resources>
 </document>

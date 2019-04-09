@@ -10,6 +10,7 @@ import Foundation
 
 public struct Session {
     var idSession: Int
+    var imageSpeaker: String
     var sessionStart: Date
     var sessionEnds: Date
     var sessionTime: TimeInterval {
@@ -24,7 +25,7 @@ public struct Session {
 
 extension Session {
     
-    init(idSession: Int, sessionStartHour: Int, sessionStartMinute: Int, sessionEndHour: Int, sessionEndMinute: Int, speaker: String, smallDescription: String, bigDescription: String, trackLocation: String) {
+    init(idSession: Int, imageSpeaker: String, sessionStartHour: Int, sessionStartMinute: Int, sessionEndHour: Int, sessionEndMinute: Int, speaker: String, smallDescription: String, bigDescription: String, trackLocation: String) {
         
         self.idSession = idSession
         
@@ -42,6 +43,7 @@ extension Session {
         self.sessionEnds = calendar.date(from: endComponents)!
         
         self.speaker = speaker
+        self.imageSpeaker = imageSpeaker
         self.smallDescription = smallDescription
         self.bigDescription = bigDescription
         self.trackLocation = trackLocation

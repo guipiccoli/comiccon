@@ -11,7 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
   
-    
+    @IBOutlet var day1btn: UIButton!
+    @IBOutlet var day2btn: UIButton!
+    @IBOutlet var day4btn: UIButton!
+    @IBOutlet var day3btn: UIButton!
     @IBOutlet weak var tableView: UITableView!
     private var cellExpandable: Bool = false
     var selectedIndexPath: IndexPath?
@@ -21,10 +24,44 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "bgnavbar"), for: .default)
+        
+        
+        day1btn.titleLabel?.numberOfLines = 2
+        day1btn.titleLabel?.textAlignment = .center
+        day2btn.titleLabel?.numberOfLines = 2
+        day2btn.titleLabel?.textAlignment = .center
+        day3btn.titleLabel?.numberOfLines = 2
+        day3btn.titleLabel?.textAlignment = .center
+        day4btn.titleLabel?.numberOfLines = 2
+        day4btn.titleLabel?.textAlignment = .center
+        
+        day1btn.setTitle("July \n18", for: .normal)
+        day2btn.setTitle("July \n19", for: .normal)
+        day3btn.setTitle("July \n20", for: .normal)
+        day4btn.setTitle("July \n21", for: .normal)
+
         self.tableView.dataSource = self
         tableView.delegate = self
     }
+    
+    
+    @IBAction func favoriteButton(_ sender: UIButton) {
+        let disable = UIImage(named: "star_1")
+        let enable = UIImage(named: "star_2")
+
+        
+        if sender.image(for: .normal) == disable {
+            sender.setImage(enable, for: .normal)
+            print("disable")
+        }
+        else {
+            sender.setImage(disable, for: .normal)
+            print("enable")
+        }
+        
+    }
+    
     
 }
 
@@ -45,9 +82,18 @@ extension ViewController: UITableViewDataSource {
         cell.trackLocationLabel.font = UIFont.systemFont(ofSize: 12, weight: .medium)
         cell.bigDescriptionLabel.font = UIFont.systemFont(ofSize: 13.2, weight: .regular)
         
-        //falta incluir na model e colocar todos icones
-        cell.imageSpeaker.image = UIImage(named: "aragones")
-    
+ 
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "hh:mm"
+        let timeStart = formatter.string(from: sessionAtIndexPath.sessionStart)
+        
+        formatter.dateFormat = "hh:mm"
+        let timeEnd = formatter.string(from: sessionAtIndexPath.sessionEnds)
+        
+        
+        cell.hourSessionLabel.text = "WED \(timeStart)PM - \(timeEnd)PM"
+        cell.imageSpeaker.image = UIImage(named: sessionAtIndexPath.imageSpeaker)
         cell.speakerSessionLabel.text = sessionAtIndexPath.speaker
         cell.numberSessionLabel.text = "SESSION \(sessionAtIndexPath.idSession):"
         cell.smallDescriptionLabel.text = sessionAtIndexPath.smallDescription
