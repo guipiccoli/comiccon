@@ -113,7 +113,7 @@ public class SessionBank{
                                  sessionStartMinute: 00,
                                  sessionEndHour: 07,
                                  sessionEndMinute: 00,
-                                 speaker: "KatieCook",
+                                 speaker: "Katie Cook",
                                  smallDescription: "Writer-illustrator, My Little Pony",
                                  bigDescription: "Katie Cook is an illustrator and writer whose main focus is in comic books and children’s books. She is the creator of the popular webcomic Nothing Special on Webtoon and Gronk: A Monster’s Story. She spent several years as the lead writer for IDW’s My Little Pony: Friendship is Magic. Katie is the illustrator of the Star Wars books ABC-3PO and Obi-123.She has also done work for Marvel, Disney, Fraggle Rock, and much more!",
                                  trackLocation: "Comics @ Exhibit Hall 3"))
