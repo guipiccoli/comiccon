@@ -29,13 +29,26 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet var favoriteButton: UIButton!
     
     
-    func generateTimeBars(timeElapsed: Double, timeUntilBegin: Double) {
-        createRect(rectView: upperView, timeElapsedPercentage: timeUntilBegin)
-        createRect(rectView: bottomView, timeElapsedPercentage: timeElapsed)
-        createRect(rectView: colapsedView, timeElapsedPercentage: timeElapsed)
+    
+    func clear() {
+        [upperView, colapsedView, bottomView]
+            .compactMap{ $0 }
+            .forEach{ $0.layer.sublayers?
+                .forEach{ $0.removeFromSuperlayer() } }
+    }
+    func createUpperBar(timeElapsedUpper: Double) {
+        createRect(rectView: upperView, timeElapsedPercentage: timeElapsedUpper)
+    }
+    
+    func createBottomBar(timeElapsedBottom: Double) {
+        createRect(rectView: bottomView, timeElapsedPercentage: timeElapsedBottom)
+        createRect(rectView: colapsedView, timeElapsedPercentage: timeElapsedBottom)
     }
     
     func createRect(rectView: UIView, timeElapsedPercentage: Double){
+//        rectView.layer.sublayers = nil
+//        rectView.layer.sublayers?.forEach{ $0.removeFromSuperlayer() }
+        rectView.setNeedsDisplay()
         let line = CAShapeLayer()
         let line2 = CAShapeLayer()
         let path = UIBezierPath()

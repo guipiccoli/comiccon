@@ -33,7 +33,7 @@ extension Session {
         var startComponents = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: Date())
         startComponents.year = 2019
         startComponents.month = 4
-        startComponents.day = 9
+        startComponents.day = 10
         startComponents.hour = sessionStartHour
         startComponents.minute = sessionStartMinute
         self.sessionStart = calendar.date(from: startComponents)!
@@ -41,7 +41,7 @@ extension Session {
         var endComponents = calendar.dateComponents([.day, .hour, .minute], from: Date())
         endComponents.year = 2019
         endComponents.month = 4
-        endComponents.day = 9
+        endComponents.day = 10
         endComponents.hour = sessionEndHour
         endComponents.minute = sessionEndMinute
         self.sessionEnds = calendar.date(from: endComponents)!

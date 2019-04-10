@@ -38,10 +38,10 @@ class ViewController: UIViewController {
         day4btn.titleLabel?.numberOfLines = 2
         day4btn.titleLabel?.textAlignment = .center
         
-        day1btn.setTitle("April \n9", for: .normal)
-        day2btn.setTitle("April \n10", for: .normal)
-        day3btn.setTitle("April \n11", for: .normal)
-        day4btn.setTitle("April \n12", for: .normal)
+        day1btn.setTitle("April \n10", for: .normal)
+        day2btn.setTitle("April \n11", for: .normal)
+        day3btn.setTitle("April \n12", for: .normal)
+        day4btn.setTitle("April \n13", for: .normal)
 
         self.tableView.dataSource = self
         tableView.delegate = self
@@ -74,6 +74,7 @@ extension ViewController: UITableViewDataSource {
         
         let cell  = tableView.dequeueReusableCell(withIdentifier: "teste") as! SessionTableViewCell
         
+        cell.clear()
         let sessionAtIndexPath = sessions.list[indexPath.row]
         cell.speakerSessionLabel.font = UIFont.systemFont(ofSize: 21, weight: .heavy)
         cell.numberSessionLabel.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
@@ -101,7 +102,6 @@ extension ViewController: UITableViewDataSource {
        //cell.bigDescriptionLabel.sizeToFit()
         cell.trackLocationLabel.text = sessionAtIndexPath.trackLocation
         cell.trackLocationLabel.sizeToFit()
-        //cell.createCircle(timeElapsedPercentage: 3/4)
         
         switch sessionAtIndexPath.stageNumber {
         case 1:
@@ -116,29 +116,49 @@ extension ViewController: UITableViewDataSource {
             cell.locationImage.image = nil
         }
         
+        let lastSession = sessions.list[max(indexPath.row - 1, 0)]
+        let nextSession = sessions.list[min(indexPath.row + 1, sessions.list.count - 1)]
+        
+        var upperBarPercentage: Double = 0
+        var bottomBarPercentage: Double = 0
+        
+        let endLast = lastSession.sessionEnds
+        let end = sessionAtIndexPath.sessionEnds
+        let begin = sessionAtIndexPath.sessionStart
+        let beginNext = nextSession.sessionStart
+        let now = Date()
+        
+        let upperBarUntil = now.timeIntervalSince1970 - endLast.timeIntervalSince1970
+        let upperBarTotal = begin.timeIntervalSince1970 - endLast.timeIntervalSince1970
+        upperBarPercentage = 1 - ((upperBarTotal - upperBarUntil)/upperBarTotal)
+        if  (sessionAtIndexPath.idSession != 1) {
+            //cell.createUpperBar(timeElapsedUpper: upperBarPercentage)
+        }
+        
+        
+        let roundBarUntil = now.timeIntervalSince1970 - begin.timeIntervalSince1970
+        let roundBarTotal = end.timeIntervalSince1970 - begin.timeIntervalSince1970
+        let roundBarPercentage = 1 - ((roundBarTotal - roundBarUntil)/roundBarTotal)
+        print(indexPath.row)
+        print(sessionAtIndexPath)
+        cell.createCircle(timeElapsedPercentage: roundBarPercentage)
+        
+        
+        
+        if end.timeIntervalSince1970 < now.timeIntervalSince1970{
+            bottomBarPercentage = 1
+        }
+        else{
+            bottomBarPercentage = 0
+        }
+        
+        
+        //cell.createBottomBar(timeElapsedBottom: bottomBarPercentage)
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let sessionAtIndexPath = sessions.list[indexPath.row]
-        let lastSession = sessions.list[max(indexPath.row - 1, 0)]
-        let end = sessionAtIndexPath.sessionEnds
-        let start = sessionAtIndexPath.sessionStart
-        let now = Date()
-         print("now>\(now)")
-        print("derp>\(sessionAtIndexPath.sessionEnds)")
-        
-        let timeBetweenSessions = start.timeIntervalSinceReferenceDate - lastSession.sessionStart.timeIntervalSinceReferenceDate
-        let timePassedSinceLastSession = now.timeIntervalSinceReferenceDate - lastSession.sessionStart.timeIntervalSinceReferenceDate
-        let timeUntilEndSession = end.timeIntervalSinceReferenceDate - now.timeIntervalSinceReferenceDate
-        
-        let timeUntilEndSessionPercentage = (sessionAtIndexPath.sessionTime - timeUntilEndSession) / sessionAtIndexPath.sessionTime
-        let timeUntilBeginSessionPercentage = timePassedSinceLastSession / timeBetweenSessions
 
-        (cell as? SessionTableViewCell)?.createCircle(timeElapsedPercentage: timeUntilEndSessionPercentage)
-        (cell as? SessionTableViewCell)?.generateTimeBars(timeElapsed: timeUntilEndSessionPercentage, timeUntilBegin: timeUntilBeginSessionPercentage)
-    }
 }
 
 
@@ -150,7 +170,9 @@ extension ViewController: UITableViewDelegate {
         if cellExpandable {
             cellExpandable = false
             UIView.animate(withDuration: 0.4) {
-                tableView.cellForRow(at: self.selectedIndexPath!)!.contentView.backgroundColor = UIColor.init(red: 235.0/255, green: 235.0/255, blue: 235.0/255, alpha: 1.0)
+                if tableView.cellForRow(at: self.selectedIndexPath!) != nil {
+                    tableView.cellForRow(at: self.selectedIndexPath!)!.contentView.backgroundColor = UIColor.init(red: 235.0/255, green: 235.0/255, blue: 235.0/255, alpha: 1.0)
+                }
             }
         } else {
             UIView.animate(withDuration: 0.4) {
