@@ -29,16 +29,19 @@ extension Session {
     init(idSession: Int, imageSpeaker: String, sessionStartHour: Int, sessionStartMinute: Int, sessionEndHour: Int, sessionEndMinute: Int, speaker: String, smallDescription: String, bigDescription: String, trackLocation: String, stageNumber: Int) {
         
         self.idSession = idSession
-        
         let calendar = Calendar.current
-        var startComponents = calendar.dateComponents([.day, .hour, .minute], from: Date())
-        startComponents.day = 18
+        var startComponents = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: Date())
+        startComponents.year = 2019
+        startComponents.month = 4
+        startComponents.day = 9
         startComponents.hour = sessionStartHour
         startComponents.minute = sessionStartMinute
         self.sessionStart = calendar.date(from: startComponents)!
         
         var endComponents = calendar.dateComponents([.day, .hour, .minute], from: Date())
-        endComponents.day = 18
+        endComponents.year = 2019
+        endComponents.month = 4
+        endComponents.day = 9
         endComponents.hour = sessionEndHour
         endComponents.minute = sessionEndMinute
         self.sessionEnds = calendar.date(from: endComponents)!

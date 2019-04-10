@@ -38,10 +38,10 @@ class ViewController: UIViewController {
         day4btn.titleLabel?.numberOfLines = 2
         day4btn.titleLabel?.textAlignment = .center
         
-        day1btn.setTitle("July \n18", for: .normal)
-        day2btn.setTitle("July \n19", for: .normal)
-        day3btn.setTitle("July \n20", for: .normal)
-        day4btn.setTitle("July \n21", for: .normal)
+        day1btn.setTitle("April \n9", for: .normal)
+        day2btn.setTitle("April \n10", for: .normal)
+        day3btn.setTitle("April \n11", for: .normal)
+        day4btn.setTitle("April \n12", for: .normal)
 
         self.tableView.dataSource = self
         tableView.delegate = self
@@ -121,8 +121,23 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        (cell as? SessionTableViewCell)?.createCircle(timeElapsedPercentage: 3/4)
+        let sessionAtIndexPath = sessions.list[indexPath.row]
+        let lastSession = sessions.list[max(indexPath.row - 1, 0)]
+        let end = sessionAtIndexPath.sessionEnds
+        let start = sessionAtIndexPath.sessionStart
+        let now = Date()
+         print("now>\(now)")
+        print("derp>\(sessionAtIndexPath.sessionEnds)")
+        
+        let timeBetweenSessions = start.timeIntervalSinceReferenceDate - lastSession.sessionStart.timeIntervalSinceReferenceDate
+        let timePassedSinceLastSession = now.timeIntervalSinceReferenceDate - lastSession.sessionStart.timeIntervalSinceReferenceDate
+        let timeUntilEndSession = end.timeIntervalSinceReferenceDate - now.timeIntervalSinceReferenceDate
+        
+        let timeUntilEndSessionPercentage = (sessionAtIndexPath.sessionTime - timeUntilEndSession) / sessionAtIndexPath.sessionTime
+        let timeUntilBeginSessionPercentage = timePassedSinceLastSession / timeBetweenSessions
 
+        (cell as? SessionTableViewCell)?.createCircle(timeElapsedPercentage: timeUntilEndSessionPercentage)
+        (cell as? SessionTableViewCell)?.generateTimeBars(timeElapsed: timeUntilEndSessionPercentage, timeUntilBegin: timeUntilBeginSessionPercentage)
     }
 }
 

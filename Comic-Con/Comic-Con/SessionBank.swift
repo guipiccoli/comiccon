@@ -116,9 +116,9 @@ public class SessionBank{
         
         list.append(Session.init(idSession: 9,
                                  imageSpeaker: "9_donny",
-                                 sessionStartHour: 04,
+                                 sessionStartHour: 20,
                                  sessionStartMinute: 30,
-                                 sessionEndHour: 06,
+                                 sessionEndHour: 21,
                                  sessionEndMinute: 30,
                                  speaker: "Donny Cates",
                                  smallDescription: "Writer, Venom",
@@ -128,9 +128,9 @@ public class SessionBank{
         
         list.append(Session.init(idSession: 10,
                                  imageSpeaker: "10_katie",
-                                 sessionStartHour: 06,
+                                 sessionStartHour: 21,
                                  sessionStartMinute: 00,
-                                 sessionEndHour: 07,
+                                 sessionEndHour: 22,
                                  sessionEndMinute: 00,
                                  speaker: "Katie Cook",
                                  smallDescription: "Writer-illustrator, My Little Pony",
